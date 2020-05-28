@@ -50,6 +50,8 @@ header{
 
 .menu a:hover{
 	color: orange;
+	transition: 0.8s;
+	transform: translateX(-5px);
 }
 
 main{
