@@ -1,11 +1,13 @@
 *{padding: 0;margin: 0;box-sizing: border-box;}
 
 header{
-	width: 100%;
+	width:inherit;
 	height: 100vh;
-	background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.2)),url('../Images/bg.jpg');
+	background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.2)),url('../Images/bg.jpg') ;
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
 }
 
 .menu-container{
@@ -14,6 +16,7 @@ header{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	position: relative;
 	/*background: rgba(0,0,0,0.6);*/
 }
 
@@ -23,13 +26,21 @@ header{
 }
 
 .logo img{
-	width: 300px;
-	height: 100px;
+	width: 200px;
+	height: 70px;
 	padding-left: 20px;
 	opacity: 0.7
 }
 
 .menu{
+	width: 40%;
+	height: 20vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#mylinks{
 	width: 40%;
 	height: 20vh;
 	display: flex;
@@ -104,3 +115,55 @@ main{
 	background:orange;
 }
 
+.icon{display: none;}
+
+@media only screen and (max-width: 600px) {
+  
+  .menu{display: none;}
+  .menu-container a {
+	  color: white;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  font-size: 17px;
+	  display: block;
+	  margin-top: 10px;
+	  line-height: 2px;
+}
+
+.menu-container a.icon {
+  background: transparent;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+  .center-part h3{
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: 5px;
+	word-spacing: 1px;
+	text-shadow: 2px 2px 2px black;
+	padding-bottom: 15px;
+}
+
+.center-part h1{
+	font-size: 15px;
+	font-weight: 500;
+	letter-spacing: 15px;
+	word-spacing: 5px;
+	text-shadow: 2px 2px 2px black;
+	padding-bottom: 15px;
+}
+
+.menu a{
+	width: 25%;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: rgba(255,255,255,0.8);
+	padding-top: 40px;
+	padding-left: 40PX;
+}
+
+  
+}
